@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
+import { IoSearchSharp } from "react-icons/io5";
 // import { CiMenuBurger, CiUser } from "react-icons/ci";
+import { FiShoppingCart } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import Link from "next/link";
@@ -10,14 +12,13 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [droup, setDroup] = useState(false);
 
-
-//   const menuRef = useRef();
-//   const imgRef = useRef();
-//   window.addEventListener("click", (e) => {
-//     if (e.target === menuRef.current && e.target === imgRef.current) {
-//       setNavbar(false);
-//     }
-//   });
+  //   const menuRef = useRef();
+  //   const imgRef = useRef();
+  //   window.addEventListener("click", (e) => {
+  //     if (e.target === menuRef.current && e.target === imgRef.current) {
+  //       setNavbar(false);
+  //     }
+  //   });
   return (
     <div>
       <nav className="w-full bg-slate-400 fixed top-0 left-0 right-0 z-10">
@@ -26,7 +27,12 @@ const Navbar = () => {
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               {/* {LOGO} */}
               <Link href="/">
-                <h3 className="text-2xl text-cyan-600 font-bold">LOGO</h3>
+                <Image
+                  src="/assets/logo.svg"
+                  alt="logo"
+                  width={60}
+                  height={50}
+                />
               </Link>
               <div className="md:hidden">
                 <button
@@ -79,11 +85,12 @@ const Navbar = () => {
                     Setting
                   </Link>
                 </li>
-                
               </ul>
             </div>
           </div>
-          <div>
+          <div className="flex items-center space-x-8">
+            <FiShoppingCart className="text-2xl text-white md:block hidden" />
+            <IoSearchSharp className="text-2xl text-white md:block hidden" />
             <div className="md:block hidden cursor-pointer relative">
               <FaRegUserCircle
                 onClick={() => setDroup(!droup)}

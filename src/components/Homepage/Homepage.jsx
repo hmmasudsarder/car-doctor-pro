@@ -1,12 +1,7 @@
 import React from "react";
-import Navbar from "../Shared/Navbar";
 
 const Homepage = () => {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  );
+  return <div className="h-screen"></div>;
 };
 
 export default Homepage;
