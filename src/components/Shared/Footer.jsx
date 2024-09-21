@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-base-200 text-base-content p-10">
+    <footer className="footer bg-base-200 text-base-content p-10 ">
       <aside>
         <Image src="/assets/logo.svg" height={60} width={100} alt="logofooter" />
         <p>
