@@ -1,7 +1,9 @@
-import {services} from "../lib/services"
+import ServiceCard from "../card/ServiceCard";
+import { services } from "../lib/services";
 
 const Services = () => {
-    console.log(services);
+  
+  console.log(services);
   return (
     <div className="text-slate-800 min-h-screen mt-16">
       <div className="text-center container mx-auto">
@@ -13,7 +15,9 @@ const Services = () => {
         </p>
       </div>
       <div className="container mx-auto mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        Service Cards
+        {services.map((service) => (
+          <ServiceCard service={service} key={service._id} />
+        ))}
       </div>
     </div>
   );
